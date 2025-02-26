@@ -1,0 +1,3029 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Feb 26, 2025 04:38:22 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>cares</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> step(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>T4250_Validate that user is able to document the details of the interview, store collected evidence securely within the referral, associate the referrals and update the person information</span>
+						<span class='test-time'>Feb 26, 2025 04:38:26 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 26, 2025 04:38:26 PM</span>
+	<span class='label end-time'>Feb 26, 2025 05:15:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 37m 8s+605ms</span>
+</div>
+<div class='test-desc'>T4250_Validate that user is able to document the details of the interview, store collected evidence securely within the referral, associate the referrals and update the person information </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:15:35 PM</td>
+				<td class='step-details'>
+						Overall test case failed due to one or more failed steps.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf pass' status='pass' test-id='2'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Iteration==>1</div>
+			<span class='node-time'>Feb 26, 2025 04:38:26 PM</span>
+			&middot; <span class='node-duration'>0h 37m 8s+605ms</span>
+			<span class='test-status right pass'>pass</span>
+			<div class='category-list'>
+				<span class='category label'>cares</span>
+			</div>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:38:28 PM</td>
+							<td class='step-details'>
+									"=================Module: "COMMON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:38:28 PM</td>
+							<td class='step-details'>
+									"=================Screen: "Login"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:38:32 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Navigate -> https://login.4.cares.cwds.ca.gov/
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:38:33 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Entered Text -> Auto_Hstaff1_ContraCosta_V1_SIT@nomail.ca.gov
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:38:33 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Entered Password -> *********************
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:38:36 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Click --> Sign in
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:38:44 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Click --> CWS-CARES (SIT V1)
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:38:56 PM</td>
+							<td class='step-details'>
+									"=================Module: "COMMON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:38:56 PM</td>
+							<td class='step-details'>
+									"=================Screen: "Home"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:11 PM</td>
+							<td class='step-details'>
+									Navigate to App Menu Page  ====>  Click --> Show Navigation Menu
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:14 PM</td>
+							<td class='step-details'>
+									Navigate to App Menu Page  ====>  Click --> Screenings
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:14 PM</td>
+							<td class='step-details'>
+									"=================Module: "SCREENING"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:14 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningDetails"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:18 PM</td>
+							<td class='step-details'>
+									Click New Screening button  ====>  Click --> New
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:21 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:22 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Entered Text -> 2/25/2025
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:23 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Entered Text -> AUTONZSOLFASLI
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:29 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:43 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Click --> Mandated Reporter
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:46 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Entered Text -> AUTORoberto
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:49 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Entered Text -> AUTOMadelaine
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:39:59 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:40:05 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:40:25 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:40:30 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:40:38 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:40:42 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:40:44 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Entered Text -> 1168455482
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:40:46 PM</td>
+							<td class='step-details'>
+									Enter Screening Details  ====>  Entered Text -> test@gmail.com
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:40:47 PM</td>
+							<td class='step-details'>
+									Submit Screening Details  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:40:52 PM</td>
+							<td class='step-details'>
+									Submit Screening Details  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:40:55 PM</td>
+							<td class='step-details'>
+									Submit Screening Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:04 PM</td>
+							<td class='step-details'>
+									"=================Module: "SCREENING"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:04 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningPersons"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:07 PM</td>
+							<td class='step-details'>
+									Navigate to Screening Persons  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:21 PM</td>
+							<td class='step-details'>
+									Process Add Screening Person  ====>  Entered Text -> 2/25/2025
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:24 PM</td>
+							<td class='step-details'>
+									Process Add Screening Person  ====>  Entered Text -> AUTOMoises
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:28 PM</td>
+							<td class='step-details'>
+									Process Add Screening Person  ====>  Entered Text -> AUTOJonathon
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:33 PM</td>
+							<td class='step-details'>
+									Process Add Screening Person  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:39 PM</td>
+							<td class='step-details'>
+									Process Add Screening Person  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:41 PM</td>
+							<td class='step-details'>
+									Process Add Screening Person  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:46 PM</td>
+							<td class='step-details'>
+									"=================Module: "SCREENING"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:46 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningValidatePerson"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:48 PM</td>
+							<td class='step-details'>
+									Validate Screening Person  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:51 PM</td>
+							<td class='step-details'>
+									Navigate to Screening Person  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:41:55 PM</td>
+							<td class='step-details'>
+									Navigate to Validate Person  ====>  Click --> Validate Person
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:42:09 PM</td>
+							<td class='step-details'>
+									Validate Screening Person  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:42:11 PM</td>
+							<td class='step-details'>
+									Validate Screening Person  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:42:39 PM</td>
+							<td class='step-details'>
+									"=================Module: "SCREENING"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:42:39 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningAddresses"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:42:42 PM</td>
+							<td class='step-details'>
+									Navigate to Screening Addresses  ====>  Click --> Addresses
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:42:45 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Click --> Addresses
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:42:53 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Click --> New
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:02 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:03 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Entered Text -> AUTOUNPHWSXHSB
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:04 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Entered Text -> Boardman
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:04 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Entered Text -> 97818
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:18 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:32 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:33 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:40 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:44 PM</td>
+							<td class='step-details'>
+									Process Add Screening Address  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:59 PM</td>
+							<td class='step-details'>
+									"=================Module: "COMMON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:43:59 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningSafelySurrenderedBaby"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:13 PM</td>
+							<td class='step-details'>
+									Navigate to Safely Surrendered Baby  ====>  Click --> Safely Surrendered Baby
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:13 PM</td>
+							<td class='step-details'>
+									Create Safely Surrendered Baby  ====>  Entered Text -> 2/25/2025
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:15 PM</td>
+							<td class='step-details'>
+									Create Safely Surrendered Baby  ====>  Entered Text -> autoText
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:17 PM</td>
+							<td class='step-details'>
+									Create Safely Surrendered Baby  ====>  Click --> Same as Location of Child
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:19 PM</td>
+							<td class='step-details'>
+									Create Safely Surrendered Baby  ====>  Entered Text -> AutoAUTOQuinn
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:21 PM</td>
+							<td class='step-details'>
+									Create Safely Surrendered Baby  ====>  Entered Text -> AutoAUTOEmilio
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:22 PM</td>
+							<td class='step-details'>
+									Create Safely Surrendered Baby  ====>  Entered Text -> 7487526369
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:23 PM</td>
+							<td class='step-details'>
+									Create Safely Surrendered Baby  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:28 PM</td>
+							<td class='step-details'>
+									Create Safely Surrendered Baby  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:30 PM</td>
+							<td class='step-details'>
+									Create Safely Surrendered Baby  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:44 PM</td>
+							<td class='step-details'>
+									"=================Module: "SCREENING"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:44:44 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningTribalInquiry"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:03 PM</td>
+							<td class='step-details'>
+									Navigate to Screening Contact Logs  ====>  Click --> Contact Logs
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:11 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:17 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Entered Text -> 2/25/2025
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:19 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:22 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click --> Tribal Collaboration
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:25 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:27 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click --> E-mail
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:30 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:32 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click --> Attempted - Arrived at Place of Work or Other Location
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:36 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Entered Text -> AUTOMoises
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:44 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click --> AUTOMoises
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:45:58 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:00 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click --> Reporting Party
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:07 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Entered Text -> Supervisor2
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:15 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click --> Supervisor2
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:28 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:31 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click --> Court
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:31 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Mouse Hover
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:45 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:47 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click --> Continue to Inquire
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:48 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:54 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:46:56 PM</td>
+							<td class='step-details'>
+									Process Screening Tribal Inquiry And Collaboration  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:47:16 PM</td>
+							<td class='step-details'>
+									"=================Module: "SCREENING"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:47:16 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningSupervisorReview"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:47:30 PM</td>
+							<td class='step-details'>
+									Navigate to Supervisor Review Promotion  ====>  Click --> Supervisor Review/Promotion
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:47:32 PM</td>
+							<td class='step-details'>
+									Process Supervisor Review Promotion  ====>  Entered Text -> Auto_Hotline Supervisor1 Contra Costa
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:47:35 PM</td>
+							<td class='step-details'>
+									Process Supervisor Review Promotion  ====>  Click --> Auto_Hotline Supervisor1 Contra Costa
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:47:52 PM</td>
+							<td class='step-details'>
+									Process Supervisor Review Promotion  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:48:09 PM</td>
+							<td class='step-details'>
+									Process Supervisor Review Promotion  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:48:10 PM</td>
+							<td class='step-details'>
+									Process Supervisor Review Promotion  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:48:16 PM</td>
+							<td class='step-details'>
+									Process Supervisor Review Promotion  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:48:18 PM</td>
+							<td class='step-details'>
+									Process Supervisor Review Promotion  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:48:37 PM</td>
+							<td class='step-details'>
+									"=================Module: "SCREENING"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:48:37 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningERR"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:48:46 PM</td>
+							<td class='step-details'>
+									Complete ERR Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:48:56 PM</td>
+							<td class='step-details'>
+									Complete ERR Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:01 PM</td>
+							<td class='step-details'>
+									Complete ERR Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:04 PM</td>
+							<td class='step-details'>
+									Complete ERR Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:09 PM</td>
+							<td class='step-details'>
+									"=================Module: "COMMON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:09 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningSubmitForApproval"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:16 PM</td>
+							<td class='step-details'>
+									click Submit For Approval  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:17 PM</td>
+							<td class='step-details'>
+									click Submit For Approval  ====>  Entered Text -> AUTODNQLRZEFDF
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:20 PM</td>
+							<td class='step-details'>
+									click Submit For Approval  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:22 PM</td>
+							<td class='step-details'>
+									click Submit For Approval  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:22 PM</td>
+							<td class='step-details'>
+									"=================Module: "COMMON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:22 PM</td>
+							<td class='step-details'>
+									"=================Screen: "Logout"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:24 PM</td>
+							<td class='step-details'>
+									Logout  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:27 PM</td>
+							<td class='step-details'>
+									Logout  ====>  Click --> Log Out
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:36 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Navigate -> https://login.4.cares.cwds.ca.gov/
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:37 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Entered Text -> Auto_Hsupervisor1_ContraCosta_V1_SIT@nomail.ca.gov
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:38 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Entered Password -> *********************
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:40 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Click --> Sign in
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:44 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Click --> CWS-CARES (SIT V1)
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:56 PM</td>
+							<td class='step-details'>
+									Click Bell Notification Item  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:59 PM</td>
+							<td class='step-details'>
+									Click Bell Notification Item  ====>  Click --> Screening ID: SCR-000003129026 • Owner: Hotline Staff1 Contra Costa • Approval Supervisor: Auto_Hotline Supervisor1 Contra Costa • Status: Pending Approval
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:59 PM</td>
+							<td class='step-details'>
+									"=================Module: "SCREENING"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:49:59 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningApproval"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:06 PM</td>
+							<td class='step-details'>
+									Approve Screening  ====>  Click --> Approve
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:07 PM</td>
+							<td class='step-details'>
+									Approve Screening  ====>  Entered Text -> AUTOPGWXKJQJTP
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:09 PM</td>
+							<td class='step-details'>
+									Approve Screening  ====>  Click --> Approve
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:17 PM</td>
+							<td class='step-details'>
+									Logout  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:19 PM</td>
+							<td class='step-details'>
+									Logout  ====>  Click --> Log Out
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:27 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Navigate -> https://login.4.cares.cwds.ca.gov/
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:27 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Entered Text -> Auto_Hstaff1_ContraCosta_V1_SIT@nomail.ca.gov
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:28 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Entered Password -> *********************
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:30 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Click --> Sign in
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:34 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Click --> CWS-CARES (SIT V1)
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:52 PM</td>
+							<td class='step-details'>
+									"=================Module: "SCREENING"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:50:52 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningSupervisorReview"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:51:05 PM</td>
+							<td class='step-details'>
+									Navigate to Supervisor Review Promotion  ====>  Click --> Supervisor Review/Promotion
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:51:08 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Click --> Supervisor Review/Promotion
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:51:37 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:51:42 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Entered Text -> PerformanceSIT
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:51:50 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Click --> PerformanceSIT
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:52:02 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Entered Text -> PerfUnit
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:52:10 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Click --> PerfUnit
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:52:23 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:52:23 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Entered Text -> erworker3 auto
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:52:31 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Click --> erworker3 auto
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:52:32 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:52:37 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:52:40 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:52:54 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Refresh the page
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:03 PM</td>
+							<td class='step-details'>
+									Set Primary Worker  ====>  Refresh the page
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:11 PM</td>
+							<td class='step-details'>
+									Logout  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:13 PM</td>
+							<td class='step-details'>
+									Logout  ====>  Click --> Log Out
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:18 PM</td>
+							<td class='step-details'>
+									"=================Module: "COMMON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:18 PM</td>
+							<td class='step-details'>
+									"=================Screen: "Login"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:22 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Navigate -> https://login.4.cares.cwds.ca.gov/
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:23 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Entered Text -> auto_erworker3_contracosta_v1sit@osi.ca.gov
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:23 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Entered Password -> ******************
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:25 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Click --> Sign in
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:29 PM</td>
+							<td class='step-details'>
+									Process Login  ====>  Click --> CWS-CARES (SIT V1)
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:39 PM</td>
+							<td class='step-details'>
+									"=================Module: "COMMON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:39 PM</td>
+							<td class='step-details'>
+									"=================Screen: "Home"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:49 PM</td>
+							<td class='step-details'>
+									Search Record  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:49 PM</td>
+							<td class='step-details'>
+									Search Record  ====>  Entered Text -> SCR-000003129026
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:53:57 PM</td>
+							<td class='step-details'>
+									Search Record  ====>  Click --> SCR-000003129026
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:02 PM</td>
+							<td class='step-details'>
+									"=================Module: "SCREENING"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:02 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningsHeader"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:10 PM</td>
+							<td class='step-details'>
+									Search Folio Record  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:11 PM</td>
+							<td class='step-details'>
+									Search Folio Record  ====>  Entered Text -> FOL-000001586526
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:19 PM</td>
+							<td class='step-details'>
+									Search Folio Record  ====>  Click --> FOL-000001586526
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:42 PM</td>
+							<td class='step-details'>
+									"=================Module: "REFERRAL"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:42 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningReview"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:46 PM</td>
+							<td class='step-details'>
+									"=================Module: "REFERRAL"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:46 PM</td>
+							<td class='step-details'>
+									"=================Screen: "Person"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:54 PM</td>
+							<td class='step-details'>
+									Navigate to Folio Persons  ====>  Click --> Persons
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:55 PM</td>
+							<td class='step-details'>
+									Verify Folio Person role  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:54:57 PM</td>
+							<td class='step-details'>
+									Verify Folio Person role  ====>  Sucessfully Zoomed the page to -->100%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:10 PM</td>
+							<td class='step-details'>
+									"=================Module: "DOCUMENTS"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:10 PM</td>
+							<td class='step-details'>
+									"=================Screen: "ScreeningDocuments"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:30 PM</td>
+							<td class='step-details'>
+									Navigate to Documents  ====>  Click --> Documents
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:38 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:41 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:44 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:47 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:50 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Click --> County Specific
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:53 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:56 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:57 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Entered Text -> AutoDescription_AUTOGSUFMDXUJQ
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:55:59 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:56:05 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:56:07 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:56:09 PM</td>
+							<td class='step-details'>
+									Upload Document  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:56:46 PM</td>
+							<td class='step-details'>
+									Navigate to Documents  ====>  Click --> Documents
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:57:06 PM</td>
+							<td class='step-details'>
+									Update Document Status  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:57:08 PM</td>
+							<td class='step-details'>
+									Update Document Status  ====>  Click --> Update Status
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:57:13 PM</td>
+							<td class='step-details'>
+									Update Document Status  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:57:16 PM</td>
+							<td class='step-details'>
+									Update Document Status  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:57:17 PM</td>
+							<td class='step-details'>
+									Update Document Status  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:57:22 PM</td>
+							<td class='step-details'>
+									Update Document Status  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:57:24 PM</td>
+							<td class='step-details'>
+									Update Document Status  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:58:03 PM</td>
+							<td class='step-details'>
+									Navigate to Documents  ====>  Click --> Documents
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:58:23 PM</td>
+							<td class='step-details'>
+									Delete Documents  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:58:25 PM</td>
+							<td class='step-details'>
+									Delete Documents  ====>  Click --> Delete
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:58:28 PM</td>
+							<td class='step-details'>
+									Delete Documents  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:58:30 PM</td>
+							<td class='step-details'>
+									Delete Documents  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:09 PM</td>
+							<td class='step-details'>
+									Navigate to Documents  ====>  Click --> Documents
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:17 PM</td>
+							<td class='step-details'>
+									Upload New Version  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:20 PM</td>
+							<td class='step-details'>
+									Upload New Version  ====>  Click --> Upload New Version
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:24 PM</td>
+							<td class='step-details'>
+									Upload New Version  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:27 PM</td>
+							<td class='step-details'>
+									Upload New Version  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:30 PM</td>
+							<td class='step-details'>
+									Upload New Version  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:35 PM</td>
+							<td class='step-details'>
+									Upload New Version  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:37 PM</td>
+							<td class='step-details'>
+									Upload New Version  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:47 PM</td>
+							<td class='step-details'>
+									Navigate to Folio Persons  ====>  Click --> Persons
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:55 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:59:59 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Refresh the page
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:00:00 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Entered Text -> AUTOColton
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:00:01 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Entered Text -> AUTOAshly
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:00:14 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:00:17 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:00:26 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Refresh the page
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:00:51 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:00:56 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:00:56 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:01:02 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:01:04 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:01:29 PM</td>
+							<td class='step-details'>
+									Navigate to Folio Persons  ====>  Click --> Persons
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:01:37 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:01:42 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Refresh the page
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:01:44 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Entered Text -> AUTOGerardo
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:01:44 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Entered Text -> AUTOLilly
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:01:58 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:02:01 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:02:12 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Refresh the page
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:02:41 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:02:47 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:02:47 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:02:53 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:02:55 PM</td>
+							<td class='step-details'>
+									Add to Folio Persons  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:03:12 PM</td>
+							<td class='step-details'>
+									"=================Module: "REFERRAL"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:03:12 PM</td>
+							<td class='step-details'>
+									"=================Screen: "Allegations"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:03:15 PM</td>
+							<td class='step-details'>
+									Navigate To Folio Allegations  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:03:23 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:03:50 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:03:54 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:04:07 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:04:10 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:04:12 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Click --> AUTOColton AUTOAshly
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:04:15 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:04:18 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Click --> AUTOGerardo AUTOLilly
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:04:37 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:04:40 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Entered Text -> AllegationConclusionRationale
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:04:41 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:04:52 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:05:05 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:05:05 PM</td>
+							<td class='step-details'>
+									Process Allegations Info Folio   ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:05:18 PM</td>
+							<td class='step-details'>
+									"=================Module: "REFERRAL"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:05:18 PM</td>
+							<td class='step-details'>
+									"=================Screen: "Disposition"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:05:32 PM</td>
+							<td class='step-details'>
+									Navigate To Folio Dispositions  ====>  Click --> Dispositions
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:05:35 PM</td>
+							<td class='step-details'>
+									Process Disposition Info Folio   ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:05:47 PM</td>
+							<td class='step-details'>
+									Navigate to Disposition Record  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:14 PM</td>
+							<td class='step-details'>
+									Process Disposition Info Folio   ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:15 PM</td>
+							<td class='step-details'>
+									Process Disposition Info Folio   ====>  Entered Text -> 2/25/2025
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:16 PM</td>
+							<td class='step-details'>
+									Process Disposition Info Folio   ====>  Entered Text -> Rationale
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:16 PM</td>
+							<td class='step-details'>
+									Process Disposition Info Folio   ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:22 PM</td>
+							<td class='step-details'>
+									Process Disposition Info Folio   ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:24 PM</td>
+							<td class='step-details'>
+									Process Disposition Info Folio   ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:51 PM</td>
+							<td class='step-details'>
+									Navigate to Folio Persons  ====>  Click --> Persons
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:55 PM</td>
+							<td class='step-details'>
+									Navigate to Validated Person  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:55 PM</td>
+							<td class='step-details'>
+									"=================Module: "PERSON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:55 PM</td>
+							<td class='step-details'>
+									"=================Screen: "PersonDetails"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:06:59 PM</td>
+							<td class='step-details'>
+									Add to Person Information  ====>  Refresh the page
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:07:06 PM</td>
+							<td class='step-details'>
+									Add to Person Information  ====>  Entered Text -> AUTOVinita
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:07:10 PM</td>
+							<td class='step-details'>
+									Add to Person Information  ====>  Entered Text -> 2/26/2025
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:08:31 PM</td>
+							<td class='step-details'>
+									Add to Person Information  ====>  Click --> Pregnant
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:08:47 PM</td>
+							<td class='step-details'>
+									Add to Person Information  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:08:57 PM</td>
+							<td class='step-details'>
+									Add to Person Information  ====>  Click --> 0
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:09:39 PM</td>
+							<td class='step-details'>
+									Add to Sodie Information  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:09:48 PM</td>
+							<td class='step-details'>
+									Add to Sodie Information  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:09:54 PM</td>
+							<td class='step-details'>
+									Submit Person Details  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:02 PM</td>
+							<td class='step-details'>
+									Submit Person Details  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:04 PM</td>
+							<td class='step-details'>
+									Submit Person Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:09 PM</td>
+							<td class='step-details'>
+									"=================Module: "PERSON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:09 PM</td>
+							<td class='step-details'>
+									"=================Screen: "PersonBIROI"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:24 PM</td>
+							<td class='step-details'>
+									Navigate to Person Background Information Tab  ====>  Click --> Background Information
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:29 PM</td>
+							<td class='step-details'>
+									Enter Restraining Order Information Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:30 PM</td>
+							<td class='step-details'>
+									Enter Restraining Order Information Details  ====>  Entered Text -> 2/25/2025
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:31 PM</td>
+							<td class='step-details'>
+									Enter Restraining Order Information Details  ====>  Entered Text -> 2/25/2025
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:33 PM</td>
+							<td class='step-details'>
+									Enter Restraining Order Information Details  ====>  Entered Text -> AUTOMMASUQAFEP
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:33 PM</td>
+							<td class='step-details'>
+									Enter Restraining Order Information Details  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:38 PM</td>
+							<td class='step-details'>
+									Enter Restraining Order Information Details  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:40 PM</td>
+							<td class='step-details'>
+									Enter Restraining Order Information Details  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:55 PM</td>
+							<td class='step-details'>
+									"=================Module: "PERSON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:55 PM</td>
+							<td class='step-details'>
+									"=================Screen: "PersonAKA"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:10:58 PM</td>
+							<td class='step-details'>
+									Navigate to Person AKA Tab  ====>  Click --> AKA
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:02 PM</td>
+							<td class='step-details'>
+									Enter AKA Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:03 PM</td>
+							<td class='step-details'>
+									Enter AKA Details  ====>  Entered Text -> AUTOAdria
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:04 PM</td>
+							<td class='step-details'>
+									Enter AKA Details  ====>  Entered Text -> AUTOSimone
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:05 PM</td>
+							<td class='step-details'>
+									Enter AKA Details  ====>  Entered Text -> AUTOAlphonso
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:05 PM</td>
+							<td class='step-details'>
+									Enter AKA Details  ====>  Sucessfully Zoomed the page to -->50%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:10 PM</td>
+							<td class='step-details'>
+									Enter AKA Details  ====>  Sucessfully Zoomed the page to -->90%
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:12 PM</td>
+							<td class='step-details'>
+									Enter AKA Details  ====>  Navigate ->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:14 PM</td>
+							<td class='step-details'>
+									Enter AKA Details  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:33 PM</td>
+							<td class='step-details'>
+									Show Navigation Menu  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:36 PM</td>
+							<td class='step-details'>
+									Show Navigation Menu  ====>  Click --> Person Search
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:36 PM</td>
+							<td class='step-details'>
+									"=================Module: "PERSON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:36 PM</td>
+							<td class='step-details'>
+									"=================Screen: "PersonSearch"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:41 PM</td>
+							<td class='step-details'>
+									Search Person  ====>  Entered Text -> AUTOColton
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:47 PM</td>
+							<td class='step-details'>
+									Search Person  ====>  Entered Text -> AUTOAshly
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:11:49 PM</td>
+							<td class='step-details'>
+									Search Person  ====>  Click -->
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:12:01 PM</td>
+							<td class='step-details'>
+									Validate Search Person Results  ====>  Click --> AUTOColton
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:12:01 PM</td>
+							<td class='step-details'>
+									"=================Module: "PERSON"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:12:01 PM</td>
+							<td class='step-details'>
+									"=================Screen: "PersonHistory"=============="
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:12:16 PM</td>
+							<td class='step-details'>
+									Navigate To Person History  ====>  Click --> History
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>5:15:35 PM</td>
+							<td class='step-details'>
+									Validate Person History  ====>  Click -->
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>cares</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 26, 2025 04:38:26 PM</td>
+										<td class='linked' test-id='2'>Iteration==>1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Feb 26, 2025 04:38:22 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Feb 26, 2025 05:15:38 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 37m 15s+920ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Environment</td>
+								<td>SIT</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>cares</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 0,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				childCount: 1,
+				passChild: 1,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "T4250_Validate that user is able to document the details of the interview, store collected evidence securely within the referral, associate the referrals and update the person information":2228.605
+			};
+		</script>
+	
+		  <script src='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>
